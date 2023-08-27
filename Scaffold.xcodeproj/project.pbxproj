@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06791E602A94ACD00053F515 /* Logger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Logger; path = ../../../Desktop/PW/Logger; sourceTree = "<group>"; };
+		069311022A9BFFC40010EAF3 /* Logger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Logger; sourceTree = "<group>"; };
 		7F45CE152A8674EE0015A7E4 /* Scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaffoldApp.swift; sourceTree = "<group>"; };
 		7F45CE1A2A8674EE0015A7E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		06791E5F2A94ACA10053F515 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				06791E602A94ACD00053F515 /* Logger */,
+				069311022A9BFFC40010EAF3 /* Logger */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -94,6 +94,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F45CE232A8674F20015A7E4 /* Build configuration list for PBXNativeTarget "Scaffold" */;
 			buildPhases = (
+				069311012A9BF7850010EAF3 /* SwiftFormat */,
 				7F45CE112A8674EE0015A7E4 /* Sources */,
 				7F45CE122A8674EE0015A7E4 /* Frameworks */,
 				7F45CE132A8674EE0015A7E4 /* Resources */,
@@ -154,6 +155,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		069311012A9BF7850010EAF3 /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./swiftformat.sh\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F45CE112A8674EE0015A7E4 /* Sources */ = {
