@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06791E8A2A94AE590053F515 /* Logger in Frameworks */ = {isa = PBXBuildFile; productRef = 06791E892A94AE590053F515 /* Logger */; };
 		7F45CE192A8674EE0015A7E4 /* ScaffoldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */; };
 		7F45CE1B2A8674EE0015A7E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CE1A2A8674EE0015A7E4 /* ContentView.swift */; };
 		7F45CE1D2A8674F20015A7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F45CE1C2A8674F20015A7E4 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06791E602A94ACD00053F515 /* Logger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Logger; path = ../../../Desktop/PW/Logger; sourceTree = "<group>"; };
 		7F45CE152A8674EE0015A7E4 /* Scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaffoldApp.swift; sourceTree = "<group>"; };
 		7F45CE1A2A8674EE0015A7E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +28,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06791E8A2A94AE590053F515 /* Logger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06791E5F2A94ACA10053F515 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				06791E602A94ACD00053F515 /* Logger */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		06791E882A94AE400053F515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F45CE0C2A8674EE0015A7E4 = {
 			isa = PBXGroup;
 			children = (
+				06791E5F2A94ACA10053F515 /* Packages */,
 				7F45CE172A8674EE0015A7E4 /* Scaffold */,
 				7F45CE162A8674EE0015A7E4 /* Products */,
+				06791E882A94AE400053F515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = Scaffold;
+			packageProductDependencies = (
+				06791E892A94AE590053F515 /* Logger */,
+			);
 			productName = Scaffold;
 			productReference = 7F45CE152A8674EE0015A7E4 /* Scaffold.app */;
 			productType = "com.apple.product-type.application";
@@ -345,6 +368,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06791E892A94AE590053F515 /* Logger */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Logger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F45CE0D2A8674EE0015A7E4 /* Project object */;
 }
