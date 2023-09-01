@@ -1,24 +1,22 @@
 import OSLog
 
-
 public func LOG(
   _ message: String,
   subsystem: String = Bundle.main.bundleIdentifier ?? "Unknown",
-  category: LogCategory,
+  category: LogCategory = .viewcycle,
   loggingLevel: LoggingLevel = .debug,
   privacyLevel: PrivacyLevel = .auto,
   file: String = #file,
   line: Int = #line,
   column: Int = #column
-)
-{
+) {
   let logger = Logger(subsystem: subsystem, category: category.rawValue)
   let fileName = (file as NSString).lastPathComponent
   let formattedMessage = "[\(fileName):\(line):\(column)] \(loggingLevel.logSymbol) \(message)"
-  
+
   switch loggingLevel {
   case .trace:
-    switch privacyLevel{
+    switch privacyLevel {
     case .public:
       logger.trace("\(formattedMessage, privacy: .public)")
     case .private:
@@ -29,7 +27,7 @@ public func LOG(
       logger.trace("\(formattedMessage, privacy: .auto)")
     }
   case .debug:
-    switch privacyLevel{
+    switch privacyLevel {
     case .public:
       logger.debug("\(formattedMessage, privacy: .public)")
     case .private:
@@ -40,7 +38,7 @@ public func LOG(
       logger.debug("\(formattedMessage, privacy: .auto)")
     }
   case .info:
-    switch privacyLevel{
+    switch privacyLevel {
     case .public:
       logger.info("\(formattedMessage, privacy: .public)")
     case .private:
@@ -51,7 +49,7 @@ public func LOG(
       logger.info("\(formattedMessage, privacy: .auto)")
     }
   case .notice:
-    switch privacyLevel{
+    switch privacyLevel {
     case .public:
       logger.notice("\(formattedMessage, privacy: .public)")
     case .private:
@@ -62,7 +60,7 @@ public func LOG(
       logger.notice("\(formattedMessage, privacy: .auto)")
     }
   case .warning:
-    switch privacyLevel{
+    switch privacyLevel {
     case .public:
       logger.warning("\(formattedMessage, privacy: .public)")
     case .private:
@@ -73,7 +71,7 @@ public func LOG(
       logger.warning("\(formattedMessage, privacy: .auto)")
     }
   case .error:
-    switch privacyLevel{
+    switch privacyLevel {
     case .public:
       logger.error("\(formattedMessage, privacy: .public)")
     case .private:
@@ -84,7 +82,7 @@ public func LOG(
       logger.error("\(formattedMessage, privacy: .auto)")
     }
   case .critical:
-    switch privacyLevel{
+    switch privacyLevel {
     case .public:
       logger.critical("\(formattedMessage, privacy: .public)")
     case .private:

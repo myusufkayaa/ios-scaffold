@@ -1,13 +1,12 @@
 //
 //  LoggingContracts.swift
-//  
+//
 //
 //  Created by Burak Ceylan (Dogus Teknoloji) on 1.09.2023.
 //
 
 import Foundation
 import OSLog
-
 
 public enum PrivacyLevel {
   case `public`
@@ -20,7 +19,6 @@ public enum LogCategory: String {
   case viewcycle
   case statistics
 }
-
 
 public enum LoggingLevel: Int {
   case none = -1
@@ -55,4 +53,3 @@ extension LoggingLevel {
     }
   }
 }
-
