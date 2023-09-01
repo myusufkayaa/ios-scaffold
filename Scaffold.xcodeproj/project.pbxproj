@@ -94,6 +94,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F45CE232A8674F20015A7E4 /* Build configuration list for PBXNativeTarget "Scaffold" */;
 			buildPhases = (
+				067804C32AA1E1350009380B /* Swiftformat */,
+				067804C42AA1E16B0009380B /* Swiftlint */,
 				7F45CE112A8674EE0015A7E4 /* Sources */,
 				7F45CE122A8674EE0015A7E4 /* Frameworks */,
 				7F45CE132A8674EE0015A7E4 /* Resources */,
@@ -154,6 +156,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		067804C32AA1E1350009380B /* Swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./swiftformat.sh\n";
+		};
+		067804C42AA1E16B0009380B /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./swiftlint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F45CE112A8674EE0015A7E4 /* Sources */ = {
