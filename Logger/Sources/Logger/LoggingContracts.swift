@@ -15,7 +15,7 @@ public enum PrivacyLevel {
   case auto
 }
 
-public enum LogCategory: String {
+public enum LogingCategory: String {
   case viewcycle
   case statistics
 }
@@ -32,7 +32,7 @@ public enum LoggingLevel: Int {
 }
 
 extension LoggingLevel {
-  internal var logSymbol: String {
+  internal var symbol: String {
     switch self {
     case .none:
       return ""

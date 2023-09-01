@@ -3,7 +3,7 @@ import OSLog
 public func LOG(
   _ message: String,
   subsystem: String = Bundle.main.bundleIdentifier ?? "Unknown",
-  category: LogCategory = .viewcycle,
+  category: LogingCategory = .viewcycle,
   loggingLevel: LoggingLevel = .debug,
   privacyLevel: PrivacyLevel = .auto,
   file: String = #file,
@@ -12,7 +12,7 @@ public func LOG(
 ) {
   let logger = Logger(subsystem: subsystem, category: category.rawValue)
   let fileName = (file as NSString).lastPathComponent
-  let formattedMessage = "[\(fileName):\(line):\(column)] \(loggingLevel.logSymbol) \(message)"
+  let formattedMessage = "[\(fileName):\(line):\(column)] \(loggingLevel.symbol) \(message)"
 
   switch loggingLevel {
   case .trace:
