@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06539B5D2AB05157000C8078 /* DTLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06539B5C2AB05157000C8078 /* DTLog+Extension.swift */; };
+		067804872AA1D1AE0009380B /* Logger in Frameworks */ = {isa = PBXBuildFile; productRef = 067804862AA1D1AE0009380B /* Logger */; };
 		7F45CE192A8674EE0015A7E4 /* ScaffoldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */; };
 		7F45CE1B2A8674EE0015A7E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CE1A2A8674EE0015A7E4 /* ContentView.swift */; };
 		7F45CE1D2A8674F20015A7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F45CE1C2A8674F20015A7E4 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06539B5C2AB05157000C8078 /* DTLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DTLog+Extension.swift"; sourceTree = "<group>"; };
+		067804842AA1D1720009380B /* Logger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Logger; sourceTree = "<group>"; };
 		7F45CE152A8674EE0015A7E4 /* Scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaffoldApp.swift; sourceTree = "<group>"; };
 		7F45CE1A2A8674EE0015A7E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				067804872AA1D1AE0009380B /* Logger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06539B5B2AB0513A000C8078 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				06539B5C2AB05157000C8078 /* DTLog+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		067804832AA1D15E0009380B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				067804842AA1D1720009380B /* Logger */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		067804852AA1D1AE0009380B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F45CE0C2A8674EE0015A7E4 = {
 			isa = PBXGroup;
 			children = (
+				067804832AA1D15E0009380B /* Packages */,
 				7F45CE172A8674EE0015A7E4 /* Scaffold */,
 				7F45CE162A8674EE0015A7E4 /* Products */,
+				067804852AA1D1AE0009380B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +81,7 @@
 		7F45CE172A8674EE0015A7E4 /* Scaffold */ = {
 			isa = PBXGroup;
 			children = (
+				06539B5B2AB0513A000C8078 /* Extensions */,
 				7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */,
 				7F45CE1A2A8674EE0015A7E4 /* ContentView.swift */,
 				7F45CE1C2A8674F20015A7E4 /* Assets.xcassets */,
@@ -74,6 +105,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F45CE232A8674F20015A7E4 /* Build configuration list for PBXNativeTarget "Scaffold" */;
 			buildPhases = (
+				067804C32AA1E1350009380B /* Swiftformat */,
+				067804C42AA1E16B0009380B /* Swiftlint */,
 				7F45CE112A8674EE0015A7E4 /* Sources */,
 				7F45CE122A8674EE0015A7E4 /* Frameworks */,
 				7F45CE132A8674EE0015A7E4 /* Resources */,
@@ -83,6 +116,9 @@
 			dependencies = (
 			);
 			name = Scaffold;
+			packageProductDependencies = (
+				067804862AA1D1AE0009380B /* Logger */,
+			);
 			productName = Scaffold;
 			productReference = 7F45CE152A8674EE0015A7E4 /* Scaffold.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +168,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		067804C32AA1E1350009380B /* Swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./swiftformat.sh\n";
+		};
+		067804C42AA1E16B0009380B /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./swiftlint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F45CE112A8674EE0015A7E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +216,7 @@
 			files = (
 				7F45CE1B2A8674EE0015A7E4 /* ContentView.swift in Sources */,
 				7F45CE192A8674EE0015A7E4 /* ScaffoldApp.swift in Sources */,
+				06539B5D2AB05157000C8078 /* DTLog+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scaffold/Preview Content\"";
-				DEVELOPMENT_TEAM = FM264ZZ62U;
+				DEVELOPMENT_TEAM = BEX3N9TB78;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -299,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scaffold/Preview Content\"";
-				DEVELOPMENT_TEAM = FM264ZZ62U;
+				DEVELOPMENT_TEAM = BEX3N9TB78;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -345,6 +423,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		067804862AA1D1AE0009380B /* Logger */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Logger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F45CE0D2A8674EE0015A7E4 /* Project object */;
 }
