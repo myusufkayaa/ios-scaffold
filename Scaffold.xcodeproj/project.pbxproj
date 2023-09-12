@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06539B5D2AB05157000C8078 /* DTLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06539B5C2AB05157000C8078 /* DTLog+Extension.swift */; };
 		067804872AA1D1AE0009380B /* Logger in Frameworks */ = {isa = PBXBuildFile; productRef = 067804862AA1D1AE0009380B /* Logger */; };
 		7F45CE192A8674EE0015A7E4 /* ScaffoldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */; };
 		7F45CE1B2A8674EE0015A7E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CE1A2A8674EE0015A7E4 /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06539B5C2AB05157000C8078 /* DTLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DTLog+Extension.swift"; sourceTree = "<group>"; };
 		067804842AA1D1720009380B /* Logger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Logger; sourceTree = "<group>"; };
 		7F45CE152A8674EE0015A7E4 /* Scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaffoldApp.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06539B5B2AB0513A000C8078 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				06539B5C2AB05157000C8078 /* DTLog+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		067804832AA1D15E0009380B /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		7F45CE172A8674EE0015A7E4 /* Scaffold */ = {
 			isa = PBXGroup;
 			children = (
+				06539B5B2AB0513A000C8078 /* Extensions */,
 				7F45CE182A8674EE0015A7E4 /* ScaffoldApp.swift */,
 				7F45CE1A2A8674EE0015A7E4 /* ContentView.swift */,
 				7F45CE1C2A8674F20015A7E4 /* Assets.xcassets */,
@@ -205,6 +216,7 @@
 			files = (
 				7F45CE1B2A8674EE0015A7E4 /* ContentView.swift in Sources */,
 				7F45CE192A8674EE0015A7E4 /* ScaffoldApp.swift in Sources */,
+				06539B5D2AB05157000C8078 /* DTLog+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scaffold/Preview Content\"";
-				DEVELOPMENT_TEAM = FM264ZZ62U;
+				DEVELOPMENT_TEAM = BEX3N9TB78;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -365,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scaffold/Preview Content\"";
-				DEVELOPMENT_TEAM = FM264ZZ62U;
+				DEVELOPMENT_TEAM = BEX3N9TB78;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

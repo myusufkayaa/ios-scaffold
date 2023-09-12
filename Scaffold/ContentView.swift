@@ -5,6 +5,7 @@
 //  Created by Muhammed Yusuf Kaya (Dogus Teknoloji) on 11.08.2023.
 //
 
+import Logger
 import SwiftUI
 
 struct ContentView: View {
@@ -14,6 +15,9 @@ struct ContentView: View {
         .imageScale(.large)
         .foregroundColor(.accentColor)
       Text("This is Scaffold!")
+    }
+    .onAppear {
+      DTLog.viewCycle.info("Content View Appeared")
     }
     .padding()
   }
